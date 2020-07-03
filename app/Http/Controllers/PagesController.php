@@ -15,7 +15,7 @@ class PagesController extends Controller
 
   public function store(Request $request)
   {
-     $this->validate($request, [
+      $validatedData = $request->validate([
        'firstname' => 'required|min:3',
        'lastname' => 'required|min:3',
        'email' => 'required|email',
@@ -34,6 +34,6 @@ class PagesController extends Controller
       'message' => request('message'),
     ]);
 
-    return 'Nous avons bien reçu vos informations avec votre commentaire. Merci !';
+    return view('about.confirm');
   }
 }
