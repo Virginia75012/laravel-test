@@ -8,8 +8,9 @@
 </head>
 	
 <body>
-
-	@yield('content')
+  <div classs="container">
+	  @yield('content')
+  </div>
 
 </body>
 </html>
