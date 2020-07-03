@@ -11058,6 +11058,11 @@ textarea {
   color: #F2F3EB;
 }
 
+.help-block {
+  color: red;
+  font-size: 1.15em;
+}
+
 @media screen and (max-width: 768px) {
   #container {
     margin: 20px auto;

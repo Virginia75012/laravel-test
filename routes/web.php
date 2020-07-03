@@ -13,4 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::get('/',[
+  'as' => 'root_path',
+  'uses' => 'PagesController@index'
+]);
+
+Route::post('/',[
+  'as' => 'root_path',
+  'uses' => 'PagesController@store'
+]);
