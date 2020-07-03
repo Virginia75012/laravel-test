@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Users;
 use Illuminate\Http\Request;
+
 
 class PagesController extends Controller
 {
@@ -21,6 +23,17 @@ class PagesController extends Controller
        'message' => 'required|min:10',
      ]);
 
-    return 'Nous avons bien reçu votre email';
+    $user = Users::create([
+      'firstname' => request('firstname'),
+      'lastname' => request('lastname'),
+      'email' => request('email'),
+      'telephone' => request('telephone'),
+      'address' => request('address'),
+      'city' => request('city'),
+      'zipcode' => request('zipcode'),
+      'message' => request('message'),
+    ]);
+
+    return 'Nous avons bien reçu vos informations avec votre commentaire. Merci !';
   }
 }
