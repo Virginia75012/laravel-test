@@ -20,5 +20,7 @@ class PagesController extends Controller
        'telephone' => 'required|max:10',
        'message' => 'required|min:10',
      ]);
+
+    return 'Nous avons bien reçu votre email';
   }
 }

@@ -5,7 +5,7 @@
   <h1 class="mt-5">&bull; Formualire de contact &bull;</h1>
     <div class="underline mt-5"></div>
 
-  <form action="{{route('root_path')}}" method="post" id="contact_form" novalidate>
+  <form action="{{route('root_path')}}" method="post" id="contact_form">
     {{csrf_field()}}
 
     <div class="row">
